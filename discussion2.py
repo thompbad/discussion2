@@ -9,7 +9,8 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("listing (1).csv")
+   
+    df = pd.read_csv("listings (1).csv.gz", compression="gzip")
 
     df["price"] = (
         df["price"]
